@@ -52,7 +52,7 @@ miCoche.mostrar();
 let miCoche2 = new Vehiculo("Opel", "Vectra", "Rojo", "13CV");
 miCoche2.mostrar();
 
-let miMoto=new Moto("BMV","Gospeld","Rojo","120Cv","Continental")
+let miMoto=new Moto("BMV","Gospeld","Rojo","120Cv",10,"Continental")
 // Llamada al método mostrar para la primera instancia
 // Llamada al método mostrar para la segunda instancia
 miMoto.mostrar();
@@ -66,10 +66,18 @@ for(dato of Object.getOwnPropertyNames(miCoche)){
     console.log(dato);
 
 }
+for(dato in miMoto){
+    console.log(`miMoto.${miMoto[dato]}`);
+}
 //console.log(miCoche.marca);
 //console.log(miCoche.potencia);
 
-
+//borar un dato en un objeto creado
+delete miCoche.potencia;
+//mostramos nuevamente miCoche y combrobamos que ha borrado la potencia
+for (dato in miCoche){
+    console.log(`${dato} : ${miCoche[dato]}`);
+}
 
 
 
