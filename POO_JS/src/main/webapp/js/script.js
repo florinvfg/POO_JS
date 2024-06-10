@@ -5,6 +5,7 @@ window.onload = function () {
     // Llama a la función leerParrafo y le pasa el elemento seleccionado.
     leerParrafo(parrafo);
     objetos();
+    viaje();
 }
 
 // Función que realiza varias operaciones sobre el párrafo y arrays.
@@ -48,7 +49,7 @@ function leerParrafo(parrafo) {
     // Verifica si miArray es una instancia de Map y lo imprime (debería ser false).
     console.log(miArray instanceof Map);
 }
-function Objetos() {
+function objetos() {
     // Crea un nuevo objeto utilizando el constructor Object.
     let notas = new Object(); // object del lenguaje
 
@@ -89,4 +90,22 @@ function Objetos() {
     // Imprime la media de los valores con dos decimales.
     console.log(notas.media.toFixed(2));
     console.log(notas.materia);
+}
+/**
+ * Declaramos un objeto Viaje...en una funcion Viaje
+ **/
+
+function viaje(){
+    let viajeN={
+        origen:"Granada",
+        destino:"El Cairo",
+        dias:8,
+        precio:1000,
+        mostrar:function (){
+            console.log(`${viajeN.origen} / ${viajeN.destino}`);
+            console.log((`Durante ${viajeN.dias} dias,con un precio de ${viajeN.precio}euros`));
+        }
+
+    }
+    viajeN.mostrar();
 }

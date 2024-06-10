@@ -11,5 +11,6 @@
 </head>
 <body>
 <p class="parrafo"></p>
+<img src=""  id="imagen" alt="">
 </body>
 </html>
