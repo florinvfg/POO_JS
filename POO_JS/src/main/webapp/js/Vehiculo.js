@@ -11,12 +11,17 @@ class Vehiculo {
         // Asignación de los parámetros a las propiedades de la clase
         this.marca = marca;
         this.modelo = modelo;
-        this.color = color; 
+        this.color = color;
         this.potencia = potencia;
     }
 
     // Método para mostrar los detalles del vehículo
     mostrar() {
+        /**
+         *  los template literals permiten incluir las propiedades del objeto
+         *  directamente en la cadena de texto, mejorando la legibilidad y
+         *  facilitando la construcción de la cadena.
+         *  */
         // Imprime en consola los detalles del vehículo utilizando template literals
         console.log(`Coche Marca ${this.marca} con modelo ${this.modelo} y es de color ${this.color} con la potencia ${this.potencia}`);
     }

@@ -17,7 +17,7 @@ window.onload = function () {
             }
         },
         bienvenida:function (){
-            alert("Bienvenido al Sistema"+this.nombre)
+            alert("Bienvenido al Sistema "+this.nombre)
         }
     }
 
