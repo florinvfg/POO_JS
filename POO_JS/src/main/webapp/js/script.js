@@ -4,6 +4,7 @@ window.onload = function () {
     let parrafo = document.querySelector(".parrafo");
     // Llama a la función leerParrafo y le pasa el elemento seleccionado.
     leerParrafo(parrafo);
+    objetos();
 }
 
 // Función que realiza varias operaciones sobre el párrafo y arrays.
@@ -47,7 +48,45 @@ function leerParrafo(parrafo) {
     // Verifica si miArray es una instancia de Map y lo imprime (debería ser false).
     console.log(miArray instanceof Map);
 }
-function Objetos(){
-    //Objeto Object
-    
+function Objetos() {
+    // Crea un nuevo objeto utilizando el constructor Object.
+    let notas = new Object(); // object del lenguaje
+
+    // Agrega un array de valores al objeto notas.
+    notas.valores = [7, 8, 6, 5, 4, 10, 8];
+
+    // Calcula la cantidad de elementos en el array y lo asigna a una propiedad del objeto.
+    notas.cantidad = notas.valores.length;
+
+    notas.materia="Matematicas";//al aobjeto se le puede crear metodos y atributos ...como en java
+    /**
+     * !!!Esto como ejemplo!!!
+     * alumno=new Alumno (nombre,apellido,dni)
+     * alumno.getNombre-->y te devuelve el nombre
+     *
+     * */
+
+    // Imprime la cantidad de elementos en el array.
+    console.log(notas.cantidad);
+
+    // Imprime el array de valores.
+    console.log(notas.valores);
+
+    // Inicializa la propiedad media en el objeto notas con valor 0.
+    notas.media = 0;
+
+    // Recorre el array de valores sumando cada valor a la propiedad media.
+    for (let i = 0; i < notas.valores.length; i++) {
+        notas.media += notas.valores[i];
+    }
+
+    // Calcula la media dividiendo la suma total de los valores entre la cantidad de elementos.
+    notas.media /= notas.valores.length;
+
+    // Imprime la media de los valores.
+    console.log(notas.media);
+
+    // Imprime la media de los valores con dos decimales.
+    console.log(notas.media.toFixed(2));
+    console.log(notas.materia);
 }
