@@ -91,21 +91,26 @@ function objetos() {
     console.log(notas.media.toFixed(2));
     console.log(notas.materia);
 }
+
 /**
- * Declaramos un objeto Viaje...en una funcion Viaje
+ * Declaramos un objeto Viaje...en una función Viaje
  **/
 
-function viaje(){
-    let viajeN={
-        origen:"Granada",
-        destino:"El Cairo",
-        dias:8,
-        precio:1000,
-        mostrar:function (){
+function viaje() {
+    // Creación de un objeto llamado viajeN con propiedades y métodos.
+    let viajeN = {
+        origen: "Granada", // Origen del viaje
+        destino: "El Cairo", // Destino del viaje
+        dias: 8, // Duración del viaje en días
+        precio: 1000, // Precio del viaje en euros
+        // Método que muestra la información del viaje en la consola
+        mostrar: function () {
+            // Imprime el origen y el destino del viaje en una sola línea
             console.log(`${viajeN.origen} / ${viajeN.destino}`);
-            console.log((`Durante ${viajeN.dias} dias,con un precio de ${viajeN.precio}euros`));
+            // Imprime la duración del viaje y el precio en una sola línea
+            console.log(`Durante ${viajeN.dias} días, con un precio de ${viajeN.precio} euros`);
         }
-
-    }
+    };
+    // Llama al método mostrar del objeto viajeN para mostrar la información del viaje
     viajeN.mostrar();
 }
