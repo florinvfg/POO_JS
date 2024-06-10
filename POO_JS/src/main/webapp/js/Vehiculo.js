@@ -60,12 +60,14 @@ miMoto.mostrar();
 
 //recorrer un objeto
 for (dato in miCoche){
-    console.log(dato);
+    console.log(`${dato} : ${miCoche[dato]}`);
 }
 for(dato of Object.getOwnPropertyNames(miCoche)){
     console.log(dato);
 
 }
+//console.log(miCoche.marca);
+//console.log(miCoche.potencia);
 
 
 
