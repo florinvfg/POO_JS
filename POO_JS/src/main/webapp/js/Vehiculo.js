@@ -26,13 +26,48 @@ class Vehiculo {
         console.log(`Coche Marca ${this.marca} con modelo ${this.modelo} y es de color ${this.color} con la potencia ${this.potencia}`);
     }
 }
+class Moto extends Vehiculo{
 
+    cilindrada;
+    posturaConduccion;
+
+    constructor(marca,modelo,color,potencia,cilindrada,posturaConduccion) {
+        super(marca,modelo,color,potencia);
+        this.cilindrada=cilindrada;
+        this.posturaConduccion=posturaConduccion;
+    }
+    mostrar() {
+        console.log("Datos de la moto");
+        super.mostrar();
+        console.log(`tiene una Cilindrada de ${this.cilindrada} y tiene ${this.posturaConduccion}Postura conduccion`)
+    }
+
+
+}
 // Creación de una nueva instancia de la clase Vehiculo
 let miCoche = new Vehiculo("Ford", "Kuga", "Gris", "110CV");
-// Creación de otra instancia de la clase Vehiculo
-let miCoche2 = new Vehiculo("Opel", "Vectra", "Rojo", "13CV");
-
-// Llamada al método mostrar para la primera instancia
 miCoche.mostrar();
-// Llamada al método mostrar para la segunda instancia
+// Creación de otra instancia de la clase Vehiculo
+
+let miCoche2 = new Vehiculo("Opel", "Vectra", "Rojo", "13CV");
 miCoche2.mostrar();
+
+let miMoto=new Moto("BMV","Gospeld","Rojo","120Cv","Continental")
+// Llamada al método mostrar para la primera instancia
+// Llamada al método mostrar para la segunda instancia
+miMoto.mostrar();
+
+
+//recorrer un objeto
+for (dato in miCoche){
+    console.log(dato);
+}
+for(dato of Object.getOwnPropertyNames(miCoche)){
+    console.log(dato);
+
+}
+
+
+
+
+

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="js/script.js"></script>
+    <script src="js/Vehiculo.js"></script>
     <link rel="stylesheet" href="css/style.css"></link>
 </head>
 <body>

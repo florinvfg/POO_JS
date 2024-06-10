@@ -6,6 +6,7 @@ window.onload = function () {
     leerParrafo(parrafo);
     objetos();
     viaje();
+    vehiculos();
 }
 
 // Función que realiza varias operaciones sobre el párrafo y arrays.
@@ -113,4 +114,9 @@ function viaje() {
     };
     // Llama al método mostrar del objeto viajeN para mostrar la información del viaje
     viajeN.mostrar();
+}
+function vehiculos(){
+
+    otroVehiculo=new Vehiculo("Citroen","C4","Rojo","110CV");
+    otroVehiculo.mostrar();
 }
