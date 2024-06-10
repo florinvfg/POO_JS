@@ -17,7 +17,7 @@ window.onload = function () {
             }
         },
         bienvenida:function (){
-            alert("Bienvenido al Sistema")
+            alert("Bienvenido al Sistema "+this.nombre)
         }
     }
 
@@ -27,7 +27,7 @@ window.onload = function () {
     let passUsuario = prompt("Indique el password del Usuario");
     // Llama al método login del objeto USUARIO con las credenciales ingresadas
     USUARIO.login(nombreUsuario, passUsuario);
-
+    USUARIO.bienvenida();
     // Cambia las propiedades del objeto USUARIO
     USUARIO.nombreUsuario = "Irene";
     USUARIO.password = "lechuza";
@@ -37,4 +37,4 @@ window.onload = function () {
     USUARIO.login(nombreUsuario, passUsuario);
     // Llama al método bienvenida del objeto USUARIO después de cambiar sus propiedades
     USUARIO.bienvenida();
-};
+}

@@ -17,7 +17,7 @@ window.onload = function () {
             }
         },
         bienvenida:function (){
-            alert("Bienvenido al Sistema")
+            alert("Bienvenido al Sistema"+this.nombre)
         }
     }
 
@@ -28,9 +28,13 @@ window.onload = function () {
     // Llama al método login del objeto USUARIO con las credenciales ingresadas
     USUARIO.login(nombreUsuario, passUsuario);
     USUARIO.bienvenida();
-    USUARIO.nombreUsuario="Irene";
-    USUARIO.password="lechuza";
-    USUARIO.nombre="Irina Medina";
-    USUARIO.login(nombreUsuario,passUsuario);
+    // Cambia las propiedades del objeto USUARIO
+    USUARIO.nombreUsuario = "Irene";
+    USUARIO.password = "lechuza";
+    USUARIO.nombre = "Irina Medina";
+
+    // Llama al método login del objeto USUARIO con las credenciales originales
+    USUARIO.login(nombreUsuario, passUsuario);
+    // Llama al método bienvenida del objeto USUARIO después de cambiar sus propiedades
     USUARIO.bienvenida();
-};
+}
